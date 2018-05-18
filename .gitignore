@@ -1,0 +1,7 @@
+*.xcworkspace
+*.generated.swift
+pods
+
+xcuserdata/
+build
+index

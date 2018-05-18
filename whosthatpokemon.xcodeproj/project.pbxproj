@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34227BDDA9C7541F7C2717F1 /* Pods_whosthatpokemonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB1F05661216F46B5DC9AF9 /* Pods_whosthatpokemonUITests.framework */; };
+		85EEC644ADF26EF7E4D30EB5 /* Pods_whosthatpokemonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE2C1111D0DB749F9673A1A /* Pods_whosthatpokemonTests.framework */; };
+		9A8848799E0C7AE6CAE26ACA /* Pods_whosthatpokemon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F4692EB8415B530DEF1E39 /* Pods_whosthatpokemon.framework */; };
+		9F310E6A20AF7D0D00B8ADBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F310E6920AF7D0D00B8ADBA /* AppDelegate.swift */; };
+		9F310E7120AF7D0D00B8ADBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F310E7020AF7D0D00B8ADBA /* Assets.xcassets */; };
+		9F310E7420AF7D0D00B8ADBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F310E7220AF7D0D00B8ADBA /* LaunchScreen.storyboard */; };
+		9FD2E62E20AF824B00E5D858 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2E62D20AF824B00E5D858 /* R.generated.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F310E7B20AF7D0D00B8ADBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F310E5E20AF7D0D00B8ADBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F310E6520AF7D0D00B8ADBA;
+			remoteInfo = whosthatpokemon;
+		};
+		9F310E8620AF7D0D00B8ADBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F310E5E20AF7D0D00B8ADBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F310E6520AF7D0D00B8ADBA;
+			remoteInfo = whosthatpokemon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03C862602F9280862FF80256 /* Pods-whosthatpokemon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whosthatpokemon.release.xcconfig"; path = "Pods/Target Support Files/Pods-whosthatpokemon/Pods-whosthatpokemon.release.xcconfig"; sourceTree = "<group>"; };
+		21F4692EB8415B530DEF1E39 /* Pods_whosthatpokemon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whosthatpokemon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB1F05661216F46B5DC9AF9 /* Pods_whosthatpokemonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whosthatpokemonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE2C1111D0DB749F9673A1A /* Pods_whosthatpokemonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whosthatpokemonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		688D522B26F5481942B7DD32 /* Pods-whosthatpokemonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whosthatpokemonUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whosthatpokemonUITests/Pods-whosthatpokemonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6DAABB32ECA4814D4CBB3232 /* Pods-whosthatpokemonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whosthatpokemonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-whosthatpokemonTests/Pods-whosthatpokemonTests.release.xcconfig"; sourceTree = "<group>"; };
+		6FF30CC9F57860E578D62E4F /* Pods-whosthatpokemonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whosthatpokemonUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-whosthatpokemonUITests/Pods-whosthatpokemonUITests.release.xcconfig"; sourceTree = "<group>"; };
+		71BE2DB0042DD4229D4CFA3B /* Pods-whosthatpokemonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whosthatpokemonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whosthatpokemonTests/Pods-whosthatpokemonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8FDBAD465F895DC9D6B2C44C /* Pods-whosthatpokemon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whosthatpokemon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whosthatpokemon/Pods-whosthatpokemon.debug.xcconfig"; sourceTree = "<group>"; };
+		9F310E6620AF7D0D00B8ADBA /* whosthatpokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whosthatpokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F310E6920AF7D0D00B8ADBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F310E7020AF7D0D00B8ADBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F310E7320AF7D0D00B8ADBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F310E7520AF7D0D00B8ADBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F310E7A20AF7D0D00B8ADBA /* whosthatpokemonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whosthatpokemonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F310E8020AF7D0D00B8ADBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F310E8520AF7D0D00B8ADBA /* whosthatpokemonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whosthatpokemonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F310E8B20AF7D0D00B8ADBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FD2E62D20AF824B00E5D858 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F310E6320AF7D0D00B8ADBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8848799E0C7AE6CAE26ACA /* Pods_whosthatpokemon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F310E7720AF7D0D00B8ADBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85EEC644ADF26EF7E4D30EB5 /* Pods_whosthatpokemonTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F310E8220AF7D0D00B8ADBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34227BDDA9C7541F7C2717F1 /* Pods_whosthatpokemonUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A099398615DE4D9D0E91430 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FDBAD465F895DC9D6B2C44C /* Pods-whosthatpokemon.debug.xcconfig */,
+				03C862602F9280862FF80256 /* Pods-whosthatpokemon.release.xcconfig */,
+				71BE2DB0042DD4229D4CFA3B /* Pods-whosthatpokemonTests.debug.xcconfig */,
+				6DAABB32ECA4814D4CBB3232 /* Pods-whosthatpokemonTests.release.xcconfig */,
+				688D522B26F5481942B7DD32 /* Pods-whosthatpokemonUITests.debug.xcconfig */,
+				6FF30CC9F57860E578D62E4F /* Pods-whosthatpokemonUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F310E5D20AF7D0D00B8ADBA = {
+			isa = PBXGroup;
+			children = (
+				9F310E6820AF7D0D00B8ADBA /* whosthatpokemon */,
+				9F310E7D20AF7D0D00B8ADBA /* whosthatpokemonTests */,
+				9F310E8820AF7D0D00B8ADBA /* whosthatpokemonUITests */,
+				9F310E6720AF7D0D00B8ADBA /* Products */,
+				2A099398615DE4D9D0E91430 /* Pods */,
+				B97414DCD2D76DB6FFAB3102 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9F310E6720AF7D0D00B8ADBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F310E6620AF7D0D00B8ADBA /* whosthatpokemon.app */,
+				9F310E7A20AF7D0D00B8ADBA /* whosthatpokemonTests.xctest */,
+				9F310E8520AF7D0D00B8ADBA /* whosthatpokemonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F310E6820AF7D0D00B8ADBA /* whosthatpokemon */ = {
+			isa = PBXGroup;
+			children = (
+				9F310E9720AF7D9600B8ADBA /* App */,
+				9FD2E62C20AF823100E5D858 /* Resources */,
+				9F310E7220AF7D0D00B8ADBA /* LaunchScreen.storyboard */,
+				9F310E7520AF7D0D00B8ADBA /* Info.plist */,
+			);
+			path = whosthatpokemon;
+			sourceTree = "<group>";
+		};
+		9F310E7D20AF7D0D00B8ADBA /* whosthatpokemonTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F310E8020AF7D0D00B8ADBA /* Info.plist */,
+			);
+			path = whosthatpokemonTests;
+			sourceTree = "<group>";
+		};
+		9F310E8820AF7D0D00B8ADBA /* whosthatpokemonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F310E8B20AF7D0D00B8ADBA /* Info.plist */,
+			);
+			path = whosthatpokemonUITests;
+			sourceTree = "<group>";
+		};
+		9F310E9720AF7D9600B8ADBA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9F310E6920AF7D0D00B8ADBA /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9FD2E62C20AF823100E5D858 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F310E7020AF7D0D00B8ADBA /* Assets.xcassets */,
+				9FD2E62D20AF824B00E5D858 /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B97414DCD2D76DB6FFAB3102 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21F4692EB8415B530DEF1E39 /* Pods_whosthatpokemon.framework */,
+				3FE2C1111D0DB749F9673A1A /* Pods_whosthatpokemonTests.framework */,
+				2CB1F05661216F46B5DC9AF9 /* Pods_whosthatpokemonUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F310E6520AF7D0D00B8ADBA /* whosthatpokemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F310E8E20AF7D0D00B8ADBA /* Build configuration list for PBXNativeTarget "whosthatpokemon" */;
+			buildPhases = (
+				97627C4370B5B4E3F6805259 /* [CP] Check Pods Manifest.lock */,
+				9FD2E62B20AF807600E5D858 /* R.swift */,
+				9F310E6220AF7D0D00B8ADBA /* Sources */,
+				9F310E6320AF7D0D00B8ADBA /* Frameworks */,
+				9F310E6420AF7D0D00B8ADBA /* Resources */,
+				B2A51CA737141854B6DAF556 /* [CP] Embed Pods Frameworks */,
+				6055E42891D9DD6FA75108A6 /* [CP] Copy Pods Resources */,
+				9FD2E62A20AF7FCE00E5D858 /* Lint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = whosthatpokemon;
+			productName = whosthatpokemon;
+			productReference = 9F310E6620AF7D0D00B8ADBA /* whosthatpokemon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F310E7920AF7D0D00B8ADBA /* whosthatpokemonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F310E9120AF7D0D00B8ADBA /* Build configuration list for PBXNativeTarget "whosthatpokemonTests" */;
+			buildPhases = (
+				84ABD42F84EE0D8DF66E20EB /* [CP] Check Pods Manifest.lock */,
+				9F310E7620AF7D0D00B8ADBA /* Sources */,
+				9F310E7720AF7D0D00B8ADBA /* Frameworks */,
+				9F310E7820AF7D0D00B8ADBA /* Resources */,
+				7EA3E3C7BD77F662BEDD3443 /* [CP] Embed Pods Frameworks */,
+				FF79B3616EA7059A8AE283B5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F310E7C20AF7D0D00B8ADBA /* PBXTargetDependency */,
+			);
+			name = whosthatpokemonTests;
+			productName = whosthatpokemonTests;
+			productReference = 9F310E7A20AF7D0D00B8ADBA /* whosthatpokemonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F310E8420AF7D0D00B8ADBA /* whosthatpokemonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F310E9420AF7D0D00B8ADBA /* Build configuration list for PBXNativeTarget "whosthatpokemonUITests" */;
+			buildPhases = (
+				A10109122633545DAF6BAF1C /* [CP] Check Pods Manifest.lock */,
+				9F310E8120AF7D0D00B8ADBA /* Sources */,
+				9F310E8220AF7D0D00B8ADBA /* Frameworks */,
+				9F310E8320AF7D0D00B8ADBA /* Resources */,
+				52ABCFC146F6BB9C81432BD6 /* [CP] Embed Pods Frameworks */,
+				193E5A8738B95FF9C114348C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F310E8720AF7D0D00B8ADBA /* PBXTargetDependency */,
+			);
+			name = whosthatpokemonUITests;
+			productName = whosthatpokemonUITests;
+			productReference = 9F310E8520AF7D0D00B8ADBA /* whosthatpokemonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F310E5E20AF7D0D00B8ADBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = danielcarlosce;
+				TargetAttributes = {
+					9F310E6520AF7D0D00B8ADBA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					9F310E7920AF7D0D00B8ADBA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9F310E6520AF7D0D00B8ADBA;
+					};
+					9F310E8420AF7D0D00B8ADBA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9F310E6520AF7D0D00B8ADBA;
+					};
+				};
+			};
+			buildConfigurationList = 9F310E6120AF7D0D00B8ADBA /* Build configuration list for PBXProject "whosthatpokemon" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F310E5D20AF7D0D00B8ADBA;
+			productRefGroup = 9F310E6720AF7D0D00B8ADBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F310E6520AF7D0D00B8ADBA /* whosthatpokemon */,
+				9F310E7920AF7D0D00B8ADBA /* whosthatpokemonTests */,
+				9F310E8420AF7D0D00B8ADBA /* whosthatpokemonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F310E6420AF7D0D00B8ADBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F310E7420AF7D0D00B8ADBA /* LaunchScreen.storyboard in Resources */,
+				9F310E7120AF7D0D00B8ADBA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F310E7820AF7D0D00B8ADBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F310E8320AF7D0D00B8ADBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		193E5A8738B95FF9C114348C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whosthatpokemonUITests/Pods-whosthatpokemonUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52ABCFC146F6BB9C81432BD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whosthatpokemonUITests/Pods-whosthatpokemonUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6055E42891D9DD6FA75108A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whosthatpokemon/Pods-whosthatpokemon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EA3E3C7BD77F662BEDD3443 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whosthatpokemonTests/Pods-whosthatpokemonTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84ABD42F84EE0D8DF66E20EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-whosthatpokemonTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97627C4370B5B4E3F6805259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-whosthatpokemon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FD2E62A20AF7FCE00E5D858 /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		9FD2E62B20AF807600E5D858 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
+		};
+		A10109122633545DAF6BAF1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-whosthatpokemonUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2A51CA737141854B6DAF556 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-whosthatpokemon/Pods-whosthatpokemon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whosthatpokemon/Pods-whosthatpokemon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF79B3616EA7059A8AE283B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-whosthatpokemonTests/Pods-whosthatpokemonTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F310E6220AF7D0D00B8ADBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F310E6A20AF7D0D00B8ADBA /* AppDelegate.swift in Sources */,
+				9FD2E62E20AF824B00E5D858 /* R.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F310E7620AF7D0D00B8ADBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F310E8120AF7D0D00B8ADBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F310E7C20AF7D0D00B8ADBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F310E6520AF7D0D00B8ADBA /* whosthatpokemon */;
+			targetProxy = 9F310E7B20AF7D0D00B8ADBA /* PBXContainerItemProxy */;
+		};
+		9F310E8720AF7D0D00B8ADBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F310E6520AF7D0D00B8ADBA /* whosthatpokemon */;
+			targetProxy = 9F310E8620AF7D0D00B8ADBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F310E7220AF7D0D00B8ADBA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F310E7320AF7D0D00B8ADBA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F310E8C20AF7D0D00B8ADBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F310E8D20AF7D0D00B8ADBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F310E8F20AF7D0D00B8ADBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FDBAD465F895DC9D6B2C44C /* Pods-whosthatpokemon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S7PZ8W24N;
+				INFOPLIST_FILE = whosthatpokemon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielcarlosce.whosthatpokemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F310E9020AF7D0D00B8ADBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03C862602F9280862FF80256 /* Pods-whosthatpokemon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S7PZ8W24N;
+				INFOPLIST_FILE = whosthatpokemon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielcarlosce.whosthatpokemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F310E9220AF7D0D00B8ADBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71BE2DB0042DD4229D4CFA3B /* Pods-whosthatpokemonTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S7PZ8W24N;
+				INFOPLIST_FILE = whosthatpokemonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielcarlosce.whosthatpokemonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whosthatpokemon.app/whosthatpokemon";
+			};
+			name = Debug;
+		};
+		9F310E9320AF7D0D00B8ADBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DAABB32ECA4814D4CBB3232 /* Pods-whosthatpokemonTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S7PZ8W24N;
+				INFOPLIST_FILE = whosthatpokemonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielcarlosce.whosthatpokemonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whosthatpokemon.app/whosthatpokemon";
+			};
+			name = Release;
+		};
+		9F310E9520AF7D0D00B8ADBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 688D522B26F5481942B7DD32 /* Pods-whosthatpokemonUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S7PZ8W24N;
+				INFOPLIST_FILE = whosthatpokemonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielcarlosce.whosthatpokemonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = whosthatpokemon;
+			};
+			name = Debug;
+		};
+		9F310E9620AF7D0D00B8ADBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FF30CC9F57860E578D62E4F /* Pods-whosthatpokemonUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S7PZ8W24N;
+				INFOPLIST_FILE = whosthatpokemonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielcarlosce.whosthatpokemonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = whosthatpokemon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F310E6120AF7D0D00B8ADBA /* Build configuration list for PBXProject "whosthatpokemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F310E8C20AF7D0D00B8ADBA /* Debug */,
+				9F310E8D20AF7D0D00B8ADBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F310E8E20AF7D0D00B8ADBA /* Build configuration list for PBXNativeTarget "whosthatpokemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F310E8F20AF7D0D00B8ADBA /* Debug */,
+				9F310E9020AF7D0D00B8ADBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F310E9120AF7D0D00B8ADBA /* Build configuration list for PBXNativeTarget "whosthatpokemonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F310E9220AF7D0D00B8ADBA /* Debug */,
+				9F310E9320AF7D0D00B8ADBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F310E9420AF7D0D00B8ADBA /* Build configuration list for PBXNativeTarget "whosthatpokemonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F310E9520AF7D0D00B8ADBA /* Debug */,
+				9F310E9620AF7D0D00B8ADBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F310E5E20AF7D0D00B8ADBA /* Project object */;
+}
