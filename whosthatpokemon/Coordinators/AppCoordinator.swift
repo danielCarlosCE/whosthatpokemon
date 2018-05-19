@@ -10,6 +10,8 @@ class AppCoordinator: Coordinator {
 
     init() {
         guard let pokemonslistViewController = R.storyboard.main.pokemonsList() else { fatalError("Rswift wasn't able to find pokemonsList at \(#function)") }
+
+        pokemonslistViewController.viewModel = PokemonsListViewModel()
         viewController = pokemonslistViewController
     }
 }

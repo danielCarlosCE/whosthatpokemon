@@ -16,6 +16,9 @@
 		9F10B81F20AF8FEE00372B88 /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F10B81D20AF8FEE00372B88 /* Pokemon Hollow.ttf */; };
 		9F10B82220AF93CC00372B88 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10B82120AF93CC00372B88 /* CardView.swift */; };
 		9F10B82420AF9B7700372B88 /* PokemonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10B82320AF9B7700372B88 /* PokemonsListViewController.swift */; };
+		9F10B82720AFA50D00372B88 /* PokemonsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10B82620AFA50D00372B88 /* PokemonsListViewModel.swift */; };
+		9F10B82920AFBCB100372B88 /* PokemonsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10B82820AFBCB100372B88 /* PokemonsListCollectionViewCell.swift */; };
+		9F10B82B20AFC17800372B88 /* PokemonsListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10B82A20AFC17800372B88 /* PokemonsListViewModelTestCase.swift */; };
 		9F310E6A20AF7D0D00B8ADBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F310E6920AF7D0D00B8ADBA /* AppDelegate.swift */; };
 		9F310E7120AF7D0D00B8ADBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F310E7020AF7D0D00B8ADBA /* Assets.xcassets */; };
 		9F310E7420AF7D0D00B8ADBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F310E7220AF7D0D00B8ADBA /* LaunchScreen.storyboard */; };
@@ -55,6 +58,9 @@
 		9F10B81D20AF8FEE00372B88 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pokemon Hollow.ttf"; path = "../../../../../../Downloads/pokemon-2/Pokemon Hollow.ttf"; sourceTree = "<group>"; };
 		9F10B82120AF93CC00372B88 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9F10B82320AF9B7700372B88 /* PokemonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsListViewController.swift; sourceTree = "<group>"; };
+		9F10B82620AFA50D00372B88 /* PokemonsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsListViewModel.swift; sourceTree = "<group>"; };
+		9F10B82820AFBCB100372B88 /* PokemonsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F10B82A20AFC17800372B88 /* PokemonsListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsListViewModelTestCase.swift; sourceTree = "<group>"; };
 		9F310E6620AF7D0D00B8ADBA /* whosthatpokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whosthatpokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F310E6920AF7D0D00B8ADBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F310E7020AF7D0D00B8ADBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,9 +125,9 @@
 		9F10B81620AF889A00372B88 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9F10B82020AF93A300372B88 /* Components */,
 				9F10B81720AF88D200372B88 /* Main.storyboard */,
 				9F10B82320AF9B7700372B88 /* PokemonsListViewController.swift */,
+				9F10B82020AF93A300372B88 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,8 +145,17 @@
 			isa = PBXGroup;
 			children = (
 				9F10B82120AF93CC00372B88 /* CardView.swift */,
+				9F10B82820AFBCB100372B88 /* PokemonsListCollectionViewCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		9F10B82520AFA4E000372B88 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9F10B82620AFA50D00372B88 /* PokemonsListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9F310E5D20AF7D0D00B8ADBA = {
@@ -170,6 +185,7 @@
 			children = (
 				9F310E9720AF7D9600B8ADBA /* App */,
 				9F10B81320AF86B300372B88 /* Coordinators */,
+				9F10B82520AFA4E000372B88 /* ViewModels */,
 				9F10B81620AF889A00372B88 /* Views */,
 				9FD2E62C20AF823100E5D858 /* Resources */,
 				9F310E7220AF7D0D00B8ADBA /* LaunchScreen.storyboard */,
@@ -182,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				9F310E8020AF7D0D00B8ADBA /* Info.plist */,
+				9F10B82A20AFC17800372B88 /* PokemonsListViewModelTestCase.swift */,
 			);
 			path = whosthatpokemonTests;
 			sourceTree = "<group>";
@@ -305,6 +322,7 @@
 					};
 					9F310E7920AF7D0D00B8ADBA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9F310E6520AF7D0D00B8ADBA;
 					};
@@ -551,6 +569,8 @@
 				9F310E6A20AF7D0D00B8ADBA /* AppDelegate.swift in Sources */,
 				9F10B82220AF93CC00372B88 /* CardView.swift in Sources */,
 				9FD2E62E20AF824B00E5D858 /* R.generated.swift in Sources */,
+				9F10B82720AFA50D00372B88 /* PokemonsListViewModel.swift in Sources */,
+				9F10B82920AFBCB100372B88 /* PokemonsListCollectionViewCell.swift in Sources */,
 				9F10B82420AF9B7700372B88 /* PokemonsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F10B82B20AFC17800372B88 /* PokemonsListViewModelTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,12 +762,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S7PZ8W24N;
 				INFOPLIST_FILE = whosthatpokemonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielcarlosce.whosthatpokemonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whosthatpokemon.app/whosthatpokemon";
@@ -759,6 +782,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S7PZ8W24N;
 				INFOPLIST_FILE = whosthatpokemonTests/Info.plist;
