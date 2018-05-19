@@ -2,6 +2,7 @@ import UIKit
 
 class PokemonsListViewController: UIViewController {
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     var viewModel: PokemonsListViewModelType!
 
     private var pokemons: [Pokemon] = []
@@ -15,15 +16,26 @@ class PokemonsListViewController: UIViewController {
         bindOutput()
     }
 
-    // MARK: Private
     private func bindInput() {
         viewModel.input.load()
     }
 
     private func bindOutput() {
-        viewModel.output.observePokemons { [weak self] (pokemons) in
-            self?.pokemons = pokemons
-            DispatchQueue.main.async { self?.collection.reloadData() }
+        viewModel.output.observePokemons { [weak self] (result) in
+            self?.updateUI(with: result)
+        }
+    }
+
+    private func updateUI(with result: PokemonsListViewModelOutPut.Result) {
+        DispatchQueue.main.async {
+            switch result {
+            case .loading:
+                self.loadingIndicator.startAnimating()
+            case .loaded(let pokemons):
+                self.loadingIndicator.stopAnimating()
+                self.pokemons = pokemons
+                self.collection.reloadData()
+            }
         }
     }
 
@@ -34,23 +46,28 @@ extension PokemonsListViewController: UICollectionViewDataSource {
         return pokemons.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collection.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.pokemonsListCell, for: indexPath) else { fatalError("Unable to dequeue pokemonsListCell") }
-        guard let pokemon = pokemon(for: indexPath) else { fatalError("Unable to get pokemon for indexPath: \(indexPath)") }
+    func collectionView(_ collection: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = dequeueCell(collection: collection, indexPath: indexPath)
+        let pokemon = self.pokemon(for: indexPath)
 
-        cell.name.text = formatTextToSolveFontPaddingIssue(pokemon)
+        cell.update(with: .init(id: pokemon.id, name: pokemon.name, downloadImage: viewModel.input.downloadImage))
+
         return cell
     }
 
-    private func pokemon(for indexPath: IndexPath) -> Pokemon? {
+    private func dequeueCell(collection: UICollectionView, indexPath: IndexPath) -> PokemonsListCollectionViewCell {
+        let id = R.reuseIdentifier.pokemonsListCell
+        let dequeuedCell = collection.dequeueReusableCell(withReuseIdentifier: id, for: indexPath)
+        guard let cell = dequeuedCell else { fatalError("Unable to dequeue pokemonsListCell") }
+        return cell
+    }
+
+    private func pokemon(for indexPath: IndexPath) -> Pokemon {
         let row = indexPath.row
 
-        guard row < pokemons.count else { return nil }
+        guard row < pokemons.count else { fatalError("Unable to get pokemon for indexPath: \(indexPath)") }
 
         return pokemons[row]
     }
 
-    private func formatTextToSolveFontPaddingIssue(_ text: String) -> String {
-        return " " + text
-    }
 }

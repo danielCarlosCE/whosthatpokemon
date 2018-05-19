@@ -76,15 +76,22 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="name" destination="LoG-2c-kSS" id="cIv-4U-Bs8"/>
+                                            <outlet property="whosthat" destination="KBB-q4-J8g" id="G2M-1g-qig"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Aqg-9i-vsG">
+                                <rect key="frame" x="169" y="392.66666666666669" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Aqg-9i-vsG" firstAttribute="centerY" secondItem="z5w-dU-ixj" secondAttribute="centerY" id="66O-QG-zVb"/>
                             <constraint firstItem="Ioi-6a-Szq" firstAttribute="trailing" secondItem="z5w-dU-ixj" secondAttribute="trailing" id="FjR-qJ-Og7"/>
                             <constraint firstItem="Ioi-6a-Szq" firstAttribute="top" secondItem="z5w-dU-ixj" secondAttribute="top" id="Uty-8i-hww"/>
+                            <constraint firstItem="Aqg-9i-vsG" firstAttribute="centerX" secondItem="z5w-dU-ixj" secondAttribute="centerX" id="nSV-dP-bRM"/>
                             <constraint firstItem="Ioi-6a-Szq" firstAttribute="bottom" secondItem="z5w-dU-ixj" secondAttribute="bottom" id="q3e-Bk-u1K"/>
                             <constraint firstItem="Ioi-6a-Szq" firstAttribute="leading" secondItem="z5w-dU-ixj" secondAttribute="leading" id="sMv-SY-MHb"/>
                         </constraints>
@@ -92,6 +99,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="Ioi-6a-Szq" id="0Ak-G2-VR4"/>
+                        <outlet property="loadingIndicator" destination="Aqg-9i-vsG" id="f9x-yf-7dY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2H-om-9Cr" userLabel="First Responder" sceneMemberID="firstResponder"/>

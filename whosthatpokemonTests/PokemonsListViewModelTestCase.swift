@@ -11,25 +11,54 @@ import XCTest
 
 class PokemonsListViewModelTestCase: XCTestCase {
 
-    var sut: PokemonsListViewModel!
+    private var sut: PokemonsListViewModel!
+    private var service: MockService!
 
     override func setUp() {
-        sut = PokemonsListViewModel()
+        service = MockService()
+        sut = PokemonsListViewModel(service: service)
     }
 
     func testInputLoadsOutput() {
-        let expect = expectation(description: "loads")
-
+        var pokemons = [Pokemon]()
         //given
-        sut.output.observePokemons { (pokemons) in
-
-            //then
-            expect.fulfill()
-            XCTAssertFalse(pokemons.isEmpty)
-        }
+        sut.output.observePokemons { pokemons = $0.pokemons }
         //when
         sut.input.load()
+        //then
+        XCTAssertFalse(pokemons.isEmpty)
+    }
 
-        waitForExpectations(timeout: 4)
+    func testOutputSortsServiceResult() {
+        var pokemons = [Pokemon]()
+        //given
+        sut.output.observePokemons { pokemons = $0.pokemons }
+        //when
+        sut.input.load()
+        //then
+        XCTAssertEqual(pokemons, [Pokemon(id: 1, name: "Pikachu"), Pokemon(id: 2, name: "Charmander")])
+    }
+
+    class MockService: PokemonServiceType {
+        func fetchFirstGeneration(completion: @escaping (Result<[Pokemon]>) -> Void) {
+            let mockPokemons = [Pokemon(id: 2, name: "Charmander"), Pokemon(id: 1, name: "Pikachu")]
+            completion(.success(mockPokemons))
+        }
+        func fetchImage(id: Int, completion: @escaping (Data) -> Void) { }
+    }
+}
+
+extension Pokemon: Equatable {
+    public static func == (lhs: Pokemon, rhs: Pokemon) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension PokemonsListViewModelOutPut.Result {
+    var pokemons: [Pokemon] {
+        if case let .loaded(pokemons) = self {
+            return  pokemons
+        }
+        return []
     }
 }
