@@ -23,6 +23,8 @@
 		9F310E6A20AF7D0D00B8ADBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F310E6920AF7D0D00B8ADBA /* AppDelegate.swift */; };
 		9F310E7120AF7D0D00B8ADBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F310E7020AF7D0D00B8ADBA /* Assets.xcassets */; };
 		9F310E7420AF7D0D00B8ADBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F310E7220AF7D0D00B8ADBA /* LaunchScreen.storyboard */; };
+		9F9C0C9120B090EC00B3E868 /* FavoritesPokemonsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C0C9020B090EC00B3E868 /* FavoritesPokemonsService.swift */; };
+		9F9C0C9320B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C0C9220B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift */; };
 		9FD2E62E20AF824B00E5D858 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2E62D20AF824B00E5D858 /* R.generated.swift */; };
 		9FFB9BA020AFD6F90075462B /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB9B9F20AFD6F90075462B /* Pokemon.swift */; };
 		9FFB9BA220AFDD140075462B /* FetchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB9BA120AFDD140075462B /* FetchResponse.swift */; };
@@ -74,6 +76,8 @@
 		9F310E8020AF7D0D00B8ADBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F310E8520AF7D0D00B8ADBA /* whosthatpokemonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whosthatpokemonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F310E8B20AF7D0D00B8ADBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9C0C9020B090EC00B3E868 /* FavoritesPokemonsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPokemonsService.swift; sourceTree = "<group>"; };
+		9F9C0C9220B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsListViewControllerTestCase.swift; sourceTree = "<group>"; };
 		9FD2E62D20AF824B00E5D858 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		9FFB9B9F20AFD6F90075462B /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		9FFB9BA120AFDD140075462B /* FetchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResponse.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				9F25FF8820AFCB9D00182FBD /* PokemonService.swift */,
+				9F9C0C9020B090EC00B3E868 /* FavoritesPokemonsService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			children = (
 				9F310E8020AF7D0D00B8ADBA /* Info.plist */,
 				9F10B82A20AFC17800372B88 /* PokemonsListViewModelTestCase.swift */,
+				9F9C0C9220B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift */,
 			);
 			path = whosthatpokemonTests;
 			sourceTree = "<group>";
@@ -598,6 +604,7 @@
 				9FD2E62E20AF824B00E5D858 /* R.generated.swift in Sources */,
 				9FFB9BA020AFD6F90075462B /* Pokemon.swift in Sources */,
 				9F10B82720AFA50D00372B88 /* PokemonsListViewModel.swift in Sources */,
+				9F9C0C9120B090EC00B3E868 /* FavoritesPokemonsService.swift in Sources */,
 				9F10B82920AFBCB100372B88 /* PokemonsListCollectionViewCell.swift in Sources */,
 				9F10B82420AF9B7700372B88 /* PokemonsListViewController.swift in Sources */,
 			);
@@ -607,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9C0C9320B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift in Sources */,
 				9F10B82B20AFC17800372B88 /* PokemonsListViewModelTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

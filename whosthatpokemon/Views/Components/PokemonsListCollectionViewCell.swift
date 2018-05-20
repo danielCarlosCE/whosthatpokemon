@@ -12,10 +12,17 @@ class PokemonsListCollectionViewCell: UICollectionViewCell {
         whosthat.image = nil
 
         let downloadingId = model.id
-        model.downloadImage(downloadingId) { [weak self] (data) in
+        model.downloadImage(downloadingId) { [weak self] (result) in
+            guard downloadingId == self?.id else { return }
             DispatchQueue.main.async {
-                if downloadingId == self?.id { self?.whosthat.image = UIImage(data: data) }
+                switch result {
+                case .single(let data):
+                    self?.whosthat.image = UIImage(data: data)
+                case .multiple(let datas):
+                    self?.whosthat.image = UIImage.animatedImage(with: datas.flatMap { UIImage(data: $0) }, duration: 1)
+                }
             }
+
         }
 
     }
@@ -23,7 +30,7 @@ class PokemonsListCollectionViewCell: UICollectionViewCell {
     struct Model {
         let id: Int
         var name: String
-        var downloadImage: (Int, @escaping (Data) -> Void) -> Void
+        var downloadImage: (Int, @escaping (FetchImageResult) -> Void) -> Void
     }
 
     private func formatTextToSolveFontPaddingIssue(_ text: String) -> String {

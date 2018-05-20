@@ -11,9 +11,9 @@ class AppCoordinator: Coordinator {
         let tabbar = UITabBarController()
         viewController = tabbar
 
-        let listNavigation = pokemonsListNavigation()
+        let listNavigation = pokemonsListNavigation(service: PokemonService())
 
-        let favorites = UIViewController()
+        let favorites = pokemonsListNavigation(service: FavoritesPokemonsService())
         favorites.tabBarItem =
             UITabBarItem(title: "My pokemons", image: R.image.pokeball(), selectedImage: nil)
 
@@ -21,12 +21,12 @@ class AppCoordinator: Coordinator {
 
     }
 
-    func pokemonsListNavigation() -> UINavigationController {
+    func pokemonsListNavigation(service: PokemonServiceType) -> UINavigationController {
         guard let pokemonslistViewController = R.storyboard.main.pokemonsList() else {
             fatalError("Rswift wasn't able to find pokemonsList at \(#function)")
         }
 
-        pokemonslistViewController.viewModel = PokemonsListViewModel(service: PokemonService())
+        pokemonslistViewController.viewModel = PokemonsListViewModel(service: service)
 
         let listNavigation = UINavigationController(rootViewController: pokemonslistViewController)
         listNavigation.tabBarItem =

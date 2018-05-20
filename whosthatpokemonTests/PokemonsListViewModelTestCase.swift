@@ -1,11 +1,3 @@
-//
-//  PokemonsListViewModelTestCase.swift
-//  whosthatpokemonTests
-//
-//  Created by HE:labs on 18/05/18.
-//  Copyright © 2018 danielcarlosce. All rights reserved.
-//
-
 import XCTest
 @testable import whosthatpokemon
 
@@ -40,11 +32,11 @@ class PokemonsListViewModelTestCase: XCTestCase {
     }
 
     class MockService: PokemonServiceType {
-        func fetchFirstGeneration(completion: @escaping (Result<[Pokemon]>) -> Void) {
+        func fetchAll(completion: @escaping (Result<[Pokemon]>) -> Void) {
             let mockPokemons = [Pokemon(id: 2, name: "Charmander"), Pokemon(id: 1, name: "Pikachu")]
             completion(.success(mockPokemons))
         }
-        func fetchImage(id: Int, completion: @escaping (Data) -> Void) { }
+        func fetchImage(id: Int, completion: @escaping (FetchImageResult) -> Void) { }
     }
 }
 

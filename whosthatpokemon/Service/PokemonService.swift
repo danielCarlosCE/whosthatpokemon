@@ -1,12 +1,12 @@
 import Foundation
 
 protocol PokemonServiceType {
-    func fetchFirstGeneration(completion: @escaping (Result<[Pokemon]>) -> Void)
-    func fetchImage(id: Int, completion: @escaping (Data) -> Void)
+    func fetchAll(completion: @escaping (Result<[Pokemon]>) -> Void)
+    func fetchImage(id: Int, completion: @escaping (FetchImageResult) -> Void)
 }
 
 class PokemonService: PokemonServiceType {
-    func fetchFirstGeneration(completion: @escaping (Result<[Pokemon]>) -> Void) {
+    func fetchAll(completion: @escaping (Result<[Pokemon]>) -> Void) {
         guard let api = URL(string: "http://pokeapi.co/api/v2/generation/1") else { fatalError("Bad URL \(#function)") }
 
         URLSession.shared.dataTask(with: api) { (data, _, error) in
@@ -25,10 +25,10 @@ class PokemonService: PokemonServiceType {
         }.resume()
     }
 
-    func fetchImage(id: Int, completion: @escaping (Data) -> Void) {
+    func fetchImage(id: Int, completion: @escaping (FetchImageResult) -> Void) {
         let urlString = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png"
         URLSession.shared.dataTask(with: URL(string: urlString)!) { data, _, _ in
-            if let data = data { completion(data) }
+            if let data = data { completion(.single(data)) }
         }.resume()
     }
 }
@@ -36,6 +36,11 @@ class PokemonService: PokemonServiceType {
 enum Result<T> {
     case success(T)
     case failure(Error)
+}
+
+enum FetchImageResult {
+    case single(Data)
+    case multiple([Data])
 }
 
 enum Error {

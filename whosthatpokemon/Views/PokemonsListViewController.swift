@@ -12,8 +12,8 @@ class PokemonsListViewController: UIViewController {
 
         collection.dataSource = self
 
-        bindInput()
         bindOutput()
+        bindInput()
     }
 
     private func bindInput() {

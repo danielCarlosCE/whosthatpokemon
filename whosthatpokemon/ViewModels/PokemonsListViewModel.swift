@@ -7,8 +7,8 @@ protocol PokemonsListViewModelType {
 
 class PokemonsListViewModel: PokemonsListViewModelType {
 
-    var input = PokemonsListViewModelInput()
-    var output = PokemonsListViewModelOutPut()
+    private(set) var input = PokemonsListViewModelInput()
+    private(set) var output = PokemonsListViewModelOutPut()
 
     private let service: PokemonServiceType
     private var pokemons: [Pokemon] = []
@@ -25,7 +25,7 @@ class PokemonsListViewModel: PokemonsListViewModelType {
 extension PokemonsListViewModel: PokemonsListViewModelInputDelegate {
     fileprivate func load() {
         pokemonObserver?(.loading)
-        service.fetchFirstGeneration { [weak self] (result) in
+        service.fetchAll { [weak self] (result) in
             switch result {
             case .success(let pokemons):
                 let sorted = pokemons.sorted { $0.id < $1.id }
@@ -37,7 +37,7 @@ extension PokemonsListViewModel: PokemonsListViewModelInputDelegate {
 
     }
 
-    fileprivate func downloadImage(for id: Int, completion: @escaping (Data) -> Void) {
+    fileprivate func downloadImage(for id: Int, completion: @escaping (FetchImageResult) -> Void) {
         service.fetchImage(id: id, completion: completion)
     }
 }
@@ -54,13 +54,13 @@ extension PokemonsListViewModel: PokemonsListViewModelOutPutDelegate {
 // MARK: Input
 class PokemonsListViewModelInput {
     fileprivate weak var delegate: PokemonsListViewModelInputDelegate?
-    fileprivate init() { }
+
 
     func load() {
         delegate?.load()
     }
 
-    func downloadImage(for id: Int, completion: @escaping (Data) -> Void) {
+    func downloadImage(for id: Int, completion: @escaping (FetchImageResult) -> Void) {
         delegate?.downloadImage(for: id, completion: completion)
     }
 
@@ -68,13 +68,12 @@ class PokemonsListViewModelInput {
 
 private protocol PokemonsListViewModelInputDelegate: class {
     func load()
-    func downloadImage(for id: Int, completion: @escaping (Data) -> Void)
+    func downloadImage(for id: Int, completion: @escaping (FetchImageResult) -> Void)
 }
 
 // MARK: Output
 class PokemonsListViewModelOutPut {
     fileprivate weak var delegate: PokemonsListViewModelOutPutDelegate?
-    fileprivate init() { }
 
     func observePokemons( _ observer: @escaping (Result) -> Void) {
         delegate?.addPokemonObserver(observer)
