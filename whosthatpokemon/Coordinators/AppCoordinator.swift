@@ -6,14 +6,15 @@ protocol Coordinator {
 
 class AppCoordinator: Coordinator {
     let viewController: UIViewController
+    let dependenciesResolver = AppDependenciesResolver()
 
     init() {
         let tabbar = UITabBarController()
         viewController = tabbar
 
-        let listNavigation = pokemonsListNavigation(service: PokemonService())
+        let listNavigation = pokemonsListNavigation(service: dependenciesResolver.pokemonsService)
 
-        let favorites = pokemonsListNavigation(service: FavoritesPokemonsService())
+        let favorites = pokemonsListNavigation(service: dependenciesResolver.favoritesPokemonsServirce)
         favorites.tabBarItem =
             UITabBarItem(title: "My pokemons", image: R.image.pokeball(), selectedImage: nil)
 

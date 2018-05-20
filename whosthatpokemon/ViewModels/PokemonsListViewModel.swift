@@ -55,7 +55,6 @@ extension PokemonsListViewModel: PokemonsListViewModelOutPutDelegate {
 class PokemonsListViewModelInput {
     fileprivate weak var delegate: PokemonsListViewModelInputDelegate?
 
-
     func load() {
         delegate?.load()
     }

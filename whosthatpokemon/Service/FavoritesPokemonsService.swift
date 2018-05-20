@@ -5,13 +5,25 @@ protocol FavoritesPokemonsServiceType: PokemonServiceType {
 }
 
 class FavoritesPokemonsService: FavoritesPokemonsServiceType {
+
+    let storageManager: PokemonsStorageManagerType
+
+    init(storageManger: PokemonsStorageManagerType) {
+        self.storageManager = storageManger
+    }
+
     func fetchAll(completion: @escaping (Result<[Pokemon]>) -> Void) {
-        completion(.success(
-            [Pokemon(id: 1, name: "bulbasaur"),
-            Pokemon(id: 4, name: "charmander"),
-            Pokemon(id: 7, name: "squirtle"),
-            Pokemon(id: 25, name: "pikachu")]
-        ))
+        seed()
+        completion(.success(storageManager.fetchAll()))
+    }
+
+    private func seed() {
+        [Pokemon(id: 1, name: "bulbasaur"),
+         Pokemon(id: 4, name: "charmander"),
+         Pokemon(id: 7, name: "squirtle"),
+         Pokemon(id: 25, name: "pikachu")].forEach {
+            PokemonsStorageManager.shared.save(pokemon: $0)
+        }
     }
 
     func fetchImage(id: Int, completion: @escaping (FetchImageResult) -> Void) {
