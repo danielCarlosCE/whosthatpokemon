@@ -4,7 +4,7 @@ protocol FavoritesPokemonsServiceType: PokemonServiceType {
 
 }
 
-class FavoritesPokemonsService: FavoritesPokemonsServiceType {
+class FavoritesPokemonsService: BaseService, FavoritesPokemonsServiceType {
 
     let storageManager: PokemonsStorageManagerType
 
@@ -38,10 +38,12 @@ class FavoritesPokemonsService: FavoritesPokemonsServiceType {
         [frontDefault, backDefault, backShiny, frontShiny].forEach {
 
             dispatchGroup.enter()
-            URLSession.shared.dataTask(with: URL(string: $0)!) { data, _, _ in
+
+            guard let url = URL(string: $0) else { fatalError("Bad URL \(#function)") }
+            rawFetchIgnoringError(url: url) { (data) in
                 if let data = data { images.append(data) }
                 dispatchGroup.leave()
-            }.resume()
+            }
 
         }
 
