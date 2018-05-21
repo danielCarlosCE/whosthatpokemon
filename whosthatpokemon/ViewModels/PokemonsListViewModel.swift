@@ -42,7 +42,7 @@ extension PokemonsListViewModel: PokemonsListViewModelInputDelegate {
 }
 
 extension PokemonsListViewModel: PokemonsListViewModelOutPutDelegate {
-    fileprivate func addPokemonObserver(_ observer: @escaping (PokemonsListViewModelOutPut.Result) -> Void) {
+    fileprivate func addPokemonsObserver(_ observer: @escaping (PokemonsListViewModelOutPut.Result) -> Void) {
         self.pokemonObserver = observer
     }
 }
@@ -71,7 +71,7 @@ class PokemonsListViewModelOutPut {
     fileprivate weak var delegate: PokemonsListViewModelOutPutDelegate?
 
     func observePokemons( _ observer: @escaping (Result) -> Void) {
-        delegate?.addPokemonObserver(observer)
+        delegate?.addPokemonsObserver(observer)
     }
 
     enum Result {
@@ -81,5 +81,5 @@ class PokemonsListViewModelOutPut {
 }
 
 private protocol PokemonsListViewModelOutPutDelegate: class {
-    func addPokemonObserver(_ observer: @escaping (PokemonsListViewModelOutPut.Result) -> Void)
+    func addPokemonsObserver(_ observer: @escaping (PokemonsListViewModelOutPut.Result) -> Void)
 }
