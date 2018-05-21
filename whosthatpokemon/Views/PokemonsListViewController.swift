@@ -5,7 +5,7 @@ class PokemonsListViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     var viewModel: PokemonsListViewModelType!
     var didSelectItem: ((PokemonPayload) -> Void)?
-    var didAppear: (() -> Void)?
+    var willAppear: (() -> Void)?
 
     private var pokemons: [Pokemon] = []
 
@@ -18,8 +18,8 @@ class PokemonsListViewController: UIViewController {
         bindOutput()
         bindInput()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        didAppear?()
+    override func viewWillAppear(_ animated: Bool) {
+        willAppear?()
     }
 
     private func bindInput() {

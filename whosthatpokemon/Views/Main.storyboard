@@ -158,6 +158,9 @@
                                     <constraint firstAttribute="height" constant="80" id="pOW-oe-IHu"/>
                                 </constraints>
                                 <state key="normal" image="big-pokeball"/>
+                                <connections>
+                                    <action selector="callPokeball" destination="HGX-cU-qLW" eventType="touchUpInside" id="0TV-5x-JWL"/>
+                                </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mVk-pu-fOd">
                                 <rect key="frame" x="169" y="392.66666666666669" width="37" height="37"/>

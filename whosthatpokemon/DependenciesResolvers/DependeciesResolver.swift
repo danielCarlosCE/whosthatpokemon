@@ -2,7 +2,7 @@ struct AppDependenciesResolver {
     var pokemonsService: PokemonServiceType {
         return PokemonService()
     }
-    var favoritesPokemonsServirce: PokemonServiceType {
+    var favoritesPokemonsServirce: FavoritesPokemonsServiceType {
         return FavoritesPokemonsService(storageManger: storageManager)
     }
     var pokemonDetailsService: PokemonDetailsServiceType {

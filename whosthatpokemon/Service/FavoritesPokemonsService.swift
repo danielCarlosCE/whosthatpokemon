@@ -1,7 +1,8 @@
 import Foundation
 
 protocol FavoritesPokemonsServiceType: PokemonServiceType {
-
+    func save(pokemon: Pokemon)
+    func delete(pokemon: Pokemon)
 }
 
 class FavoritesPokemonsService: BaseService, FavoritesPokemonsServiceType {
@@ -13,17 +14,7 @@ class FavoritesPokemonsService: BaseService, FavoritesPokemonsServiceType {
     }
 
     func fetchAll(completion: @escaping (Result<[Pokemon]>) -> Void) {
-        seed()
         completion(.success(storageManager.fetchAll()))
-    }
-
-    private func seed() {
-        [Pokemon(id: 1, name: "bulbasaur"),
-         Pokemon(id: 4, name: "charmander"),
-         Pokemon(id: 7, name: "squirtle"),
-         Pokemon(id: 25, name: "pikachu")].forEach {
-            PokemonsStorageManager.shared.save(pokemon: $0)
-        }
     }
 
     func fetchImage(id: Int, completion: @escaping (FetchImageResult) -> Void) {
@@ -52,4 +43,14 @@ class FavoritesPokemonsService: BaseService, FavoritesPokemonsServiceType {
         })
     }
 
+}
+
+extension FavoritesPokemonsService {
+    func save(pokemon: Pokemon) {
+        storageManager.save(pokemon: pokemon)
+    }
+
+    func delete(pokemon: Pokemon) {
+        storageManager.delete(pokemon: pokemon)
+    }
 }

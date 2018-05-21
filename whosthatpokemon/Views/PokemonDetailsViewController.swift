@@ -8,12 +8,19 @@ class PokemonDetailsViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
 
     var viewModel: PokemonDetailsViewModelType!
+    var didSelectItem: ((Pokemon) -> Void)?
+
+    private var pokemon: Pokemon?
 
     override func viewDidLoad() {
         guard viewModel != nil else { fatalError("\(String(describing: self)) initiated without ViewModel") }
 
         bindOutput()
         bindInput()
+    }
+    @IBAction func callPokeball() {
+        guard let pokemon = pokemon else { return }
+        didSelectItem?(pokemon)
     }
 
     private func bindInput() {
@@ -30,20 +37,25 @@ class PokemonDetailsViewController: UIViewController {
         DispatchQueue.main.async {
             switch result {
             case .loading(let payload):
-                self.loadingIndicator.startAnimating()
+
+                self.pokemon = payload.pokemon
+
                 self.name.text = self.formatTextToSolveFontPaddingIssue(payload.pokemon.name)
                 self.pokemonDescription.text = ""
                 self.view.backgroundColor = .white
-                guard  let image = payload.image else {
-                    self.whosthatpokemon.image = nil
-                    return
+                self.whosthatpokemon.image = nil
+                if  let image = payload.image  {
+                    self.whosthatpokemon.image = UIImage(data: image)
                 }
-                self.whosthatpokemon.image = UIImage(data: image)
+
+                self.loadingIndicator.startAnimating()
 
             case .loaded(let details):
+
                 self.loadingIndicator.stopAnimating()
                 self.pokemonDescription.text = details.description
                 self.view.backgroundColor = details.color.uiColor
+
             }
         }
     }
