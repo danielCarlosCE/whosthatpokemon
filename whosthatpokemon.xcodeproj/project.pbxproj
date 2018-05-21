@@ -19,8 +19,6 @@
 		9F10B82B20AFC17800372B88 /* PokemonsListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F10B82A20AFC17800372B88 /* PokemonsListViewModelTestCase.swift */; };
 		9F15255020B1EE6200403D9E /* DependeciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15254F20B1EE6200403D9E /* DependeciesResolver.swift */; };
 		9F15256720B2097800403D9E /* whosthatpokemon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F15256520B2097800403D9E /* whosthatpokemon.xcdatamodeld */; };
-		9F15256A20B209C300403D9E /* TransientPokemon+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15256820B209C300403D9E /* TransientPokemon+CoreDataClass.swift */; };
-		9F15256B20B209C300403D9E /* TransientPokemon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15256920B209C300403D9E /* TransientPokemon+CoreDataProperties.swift */; };
 		9F25FF8520AFC82900182FBD /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F25FF8320AFC82900182FBD /* Pokemon Solid.ttf */; };
 		9F25FF8620AFC82900182FBD /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F25FF8420AFC82900182FBD /* Pokemon Hollow.ttf */; };
 		9F25FF8920AFCB9D00182FBD /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F25FF8820AFCB9D00182FBD /* PokemonService.swift */; };
@@ -38,6 +36,8 @@
 		9F9C0C9320B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C0C9220B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift */; };
 		9FA23AC620B18C9900F2D1D9 /* PokemonsStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA23AC520B18C9900F2D1D9 /* PokemonsStorageManager.swift */; };
 		9FD2E62E20AF824B00E5D858 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD2E62D20AF824B00E5D858 /* R.generated.swift */; };
+		9FF8EB4C20B3218100BE578D /* TransientPokemon+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8EB4A20B3218100BE578D /* TransientPokemon+CoreDataClass.swift */; };
+		9FF8EB4D20B3218100BE578D /* TransientPokemon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8EB4B20B3218100BE578D /* TransientPokemon+CoreDataProperties.swift */; };
 		9FFB9BA020AFD6F90075462B /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB9B9F20AFD6F90075462B /* Pokemon.swift */; };
 		9FFB9BA220AFDD140075462B /* FetchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB9BA120AFDD140075462B /* FetchResponse.swift */; };
 /* End PBXBuildFile section */
@@ -78,8 +78,6 @@
 		9F10B82A20AFC17800372B88 /* PokemonsListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsListViewModelTestCase.swift; sourceTree = "<group>"; };
 		9F15254F20B1EE6200403D9E /* DependeciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependeciesResolver.swift; sourceTree = "<group>"; };
 		9F15256620B2097800403D9E /* whosthatpokemon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = whosthatpokemon.xcdatamodel; sourceTree = "<group>"; };
-		9F15256820B209C300403D9E /* TransientPokemon+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TransientPokemon+CoreDataClass.swift"; path = "/Users/helabs/Desktop/Development/whosthatpokemon/whosthatpokemon/Storage/TransientPokemon+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		9F15256920B209C300403D9E /* TransientPokemon+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TransientPokemon+CoreDataProperties.swift"; path = "/Users/helabs/Desktop/Development/whosthatpokemon/whosthatpokemon/Storage/TransientPokemon+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		9F25FF8320AFC82900182FBD /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		9F25FF8420AFC82900182FBD /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
 		9F25FF8820AFCB9D00182FBD /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
@@ -103,6 +101,8 @@
 		9F9C0C9220B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsListViewControllerTestCase.swift; sourceTree = "<group>"; };
 		9FA23AC520B18C9900F2D1D9 /* PokemonsStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsStorageManager.swift; sourceTree = "<group>"; };
 		9FD2E62D20AF824B00E5D858 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		9FF8EB4A20B3218100BE578D /* TransientPokemon+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransientPokemon+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9FF8EB4B20B3218100BE578D /* TransientPokemon+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TransientPokemon+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9FFB9B9F20AFD6F90075462B /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		9FFB9BA120AFDD140075462B /* FetchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,8 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				9FA23AC520B18C9900F2D1D9 /* PokemonsStorageManager.swift */,
-				9F15256820B209C300403D9E /* TransientPokemon+CoreDataClass.swift */,
-				9F15256920B209C300403D9E /* TransientPokemon+CoreDataProperties.swift */,
+				9FF8EB4A20B3218100BE578D /* TransientPokemon+CoreDataClass.swift */,
+				9FF8EB4B20B3218100BE578D /* TransientPokemon+CoreDataProperties.swift */,
 				9F15256520B2097800403D9E /* whosthatpokemon.xcdatamodeld */,
 			);
 			path = Storage;
@@ -649,15 +649,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F15256B20B209C300403D9E /* TransientPokemon+CoreDataProperties.swift in Sources */,
 				9F10B81520AF86D400372B88 /* AppCoordinator.swift in Sources */,
+				9FF8EB4D20B3218100BE578D /* TransientPokemon+CoreDataProperties.swift in Sources */,
 				9F7059F520B2694C001A5EA3 /* PokemonDetailsViewModel.swift in Sources */,
 				9F15256720B2097800403D9E /* whosthatpokemon.xcdatamodeld in Sources */,
 				9FFB9BA220AFDD140075462B /* FetchResponse.swift in Sources */,
+				9FF8EB4C20B3218100BE578D /* TransientPokemon+CoreDataClass.swift in Sources */,
 				9F25FF8920AFCB9D00182FBD /* PokemonService.swift in Sources */,
 				9F7059F720B26B81001A5EA3 /* PokemonDetailsService.swift in Sources */,
 				9F7059F920B26BC9001A5EA3 /* PokemonDetails.swift in Sources */,
-				9F15256A20B209C300403D9E /* TransientPokemon+CoreDataClass.swift in Sources */,
 				9F310E6A20AF7D0D00B8ADBA /* AppDelegate.swift in Sources */,
 				9F10B82220AF93CC00372B88 /* CardView.swift in Sources */,
 				9F7059FD20B27BD6001A5EA3 /* BaseService.swift in Sources */,
