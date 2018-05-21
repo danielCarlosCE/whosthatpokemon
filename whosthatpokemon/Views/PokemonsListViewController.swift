@@ -78,7 +78,7 @@ extension PokemonsListViewController: UICollectionViewDataSource {
 
 }
 
-extension PokemonsListViewController: UICollectionViewDelegate {
+extension PokemonsListViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? PokemonsListCollectionViewCell else { return }
         let pokemon = self.pokemon(for: indexPath)
@@ -87,5 +87,14 @@ extension PokemonsListViewController: UICollectionViewDelegate {
         if let image = cell.whosthat.image { imageData = UIImagePNGRepresentation(image) }
 
         didSelectItem?(PokemonPayload(pokemon: pokemon, image: imageData))
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let offset: CGFloat = 56
+        let dynamicWidth = collectionView.frame.width < 900 ? 450 : ( collectionView.frame.width / 2 ) - offset
+        let maxWidth = min(collectionView.frame.width, dynamicWidth)
+        return CGSize(width: maxWidth, height: 103)
+
     }
 }

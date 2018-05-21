@@ -115,23 +115,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRE-k6-F7g" customClass="CardView" customModule="whosthatpokemon" customModuleProvider="target">
-                                <rect key="frame" x="37" y="75.999999999999972" width="300" height="487.33333333333326"/>
+                                <rect key="frame" x="37.666666666666657" y="59.999999999999972" width="300" height="487.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Pikachu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsG-Yw-nI8" userLabel="name">
-                                        <rect key="frame" x="0.0" y="0.0" width="201" height="87"/>
+                                        <rect key="frame" x="0.6666666666666714" y="0.0" width="201" height="87"/>
                                         <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="25"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pika" translatesAutoresizingMaskIntoConstraints="NO" id="mcK-h6-5gE" userLabel="whosthatpokemon">
-                                        <rect key="frame" x="197" y="0.0" width="103" height="87"/>
+                                        <rect key="frame" x="197.66666666666669" y="0.0" width="103" height="87"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="87" id="XcO-0R-Ktv"/>
                                             <constraint firstAttribute="width" constant="103" id="aEM-Os-6Ap"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It’s in its nature to store electricity.  It feels stressed now and then if it’s unable to fully discharge the electricity." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylm-UO-bQs">
-                                        <rect key="frame" x="16" y="103" width="268" height="107.66666666666669"/>
+                                        <rect key="frame" x="16.666666666666686" y="103" width="268" height="64.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -151,8 +151,12 @@
                                     <constraint firstAttribute="trailing" secondItem="mcK-h6-5gE" secondAttribute="trailing" id="yZ9-iE-90f"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mVk-pu-fOd">
+                                <rect key="frame" x="169" y="392.66666666666669" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8q-fD-xxI">
-                                <rect key="frame" x="147" y="682" width="80" height="80"/>
+                                <rect key="frame" x="147.66666666666666" y="682" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="3mh-vo-wHj"/>
                                     <constraint firstAttribute="height" constant="80" id="pOW-oe-IHu"/>
@@ -162,24 +166,49 @@
                                     <action selector="callPokeball" destination="HGX-cU-qLW" eventType="touchUpInside" id="0TV-5x-JWL"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mVk-pu-fOd">
-                                <rect key="frame" x="169" y="392.66666666666669" width="37" height="37"/>
-                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="I8q-fD-xxI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xRE-k6-F7g" secondAttribute="bottom" constant="8" id="77O-aG-zL2"/>
                             <constraint firstItem="xRE-k6-F7g" firstAttribute="height" secondItem="Zd1-jm-GPw" secondAttribute="height" multiplier="0.6" priority="750" id="7v9-c0-4du"/>
-                            <constraint firstItem="xRE-k6-F7g" firstAttribute="top" secondItem="mPp-jd-431" secondAttribute="top" constant="32" id="Abb-Le-huf"/>
+                            <constraint firstItem="xRE-k6-F7g" firstAttribute="top" secondItem="mPp-jd-431" secondAttribute="top" constant="16" id="Abb-Le-huf"/>
+                            <constraint firstItem="xRE-k6-F7g" firstAttribute="leading" secondItem="mPp-jd-431" secondAttribute="leading" constant="32" id="O9F-be-c5c"/>
                             <constraint firstItem="mVk-pu-fOd" firstAttribute="centerY" secondItem="mPp-jd-431" secondAttribute="centerY" id="TR6-A0-bnG"/>
                             <constraint firstItem="xRE-k6-F7g" firstAttribute="width" secondItem="Zd1-jm-GPw" secondAttribute="width" multiplier="0.8" id="TRq-8D-kEX"/>
                             <constraint firstItem="I8q-fD-xxI" firstAttribute="centerX" secondItem="mPp-jd-431" secondAttribute="centerX" id="Tct-ts-cCx"/>
                             <constraint firstItem="mVk-pu-fOd" firstAttribute="centerX" secondItem="mPp-jd-431" secondAttribute="centerX" id="YiC-uY-yWP"/>
+                            <constraint firstItem="mPp-jd-431" firstAttribute="bottom" secondItem="xRE-k6-F7g" secondAttribute="bottom" constant="16" id="YjM-bd-GRw"/>
                             <constraint firstItem="xRE-k6-F7g" firstAttribute="centerX" secondItem="mPp-jd-431" secondAttribute="centerX" id="aze-08-078"/>
+                            <constraint firstItem="mPp-jd-431" firstAttribute="trailing" secondItem="I8q-fD-xxI" secondAttribute="trailing" constant="32" id="eWN-Mo-Dy3"/>
                             <constraint firstItem="I8q-fD-xxI" firstAttribute="bottom" secondItem="mPp-jd-431" secondAttribute="bottom" constant="-16" id="gwm-kl-ceH"/>
+                            <constraint firstItem="I8q-fD-xxI" firstAttribute="leading" secondItem="xRE-k6-F7g" secondAttribute="trailing" constant="32" id="vNi-00-O9f"/>
+                            <constraint firstItem="I8q-fD-xxI" firstAttribute="centerY" secondItem="mPp-jd-431" secondAttribute="centerY" id="vPl-8E-S4s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mPp-jd-431"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YjM-bd-GRw"/>
+                                <exclude reference="eWN-Mo-Dy3"/>
+                                <exclude reference="O9F-be-c5c"/>
+                                <exclude reference="vNi-00-O9f"/>
+                                <exclude reference="vPl-8E-S4s"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="YjM-bd-GRw"/>
+                                <include reference="eWN-Mo-Dy3"/>
+                                <exclude reference="7v9-c0-4du"/>
+                                <include reference="O9F-be-c5c"/>
+                                <exclude reference="TRq-8D-kEX"/>
+                                <exclude reference="aze-08-078"/>
+                                <exclude reference="77O-aG-zL2"/>
+                                <exclude reference="Tct-ts-cCx"/>
+                                <exclude reference="gwm-kl-ceH"/>
+                                <include reference="vNi-00-O9f"/>
+                                <include reference="vPl-8E-S4s"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="loadingIndicator" destination="mVk-pu-fOd" id="w2d-bB-Djh"/>
@@ -190,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCt-vo-oTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653.60000000000002" y="178.81773399014779"/>
+            <point key="canvasLocation" x="653.20197044334975" y="178.40000000000001"/>
         </scene>
     </scenes>
     <resources>

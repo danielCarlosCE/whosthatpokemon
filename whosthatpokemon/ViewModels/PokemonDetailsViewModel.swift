@@ -33,6 +33,7 @@ extension PokemonDetailsViewModel: PokemonDetailsViewModelInputDelegate {
         service.fetchDetail(for: pokemonPayload.pokemon) { [weak self] (result) in
             switch result {
             case .success(var pokemonDetail):
+                pokemonDetail.description = pokemonDetail.description.replacingOccurrences(of: "\n", with: " ")
                 pokemonDetail.image = self?.pokemonPayload.image
                 self?.pokemonDetailsObserver?(.loaded(pokemonDetail))
             default:
