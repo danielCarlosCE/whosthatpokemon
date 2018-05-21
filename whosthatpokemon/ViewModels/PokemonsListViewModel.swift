@@ -32,7 +32,6 @@ extension PokemonsListViewModel: PokemonsListViewModelInputDelegate {
                 self?.pokemonObserver?(.loaded(sorted))
             default: break
             }
-
         }
 
     }
@@ -45,9 +44,6 @@ extension PokemonsListViewModel: PokemonsListViewModelInputDelegate {
 extension PokemonsListViewModel: PokemonsListViewModelOutPutDelegate {
     fileprivate func addPokemonObserver(_ observer: @escaping (PokemonsListViewModelOutPut.Result) -> Void) {
         self.pokemonObserver = observer
-        if pokemons.isEmpty {
-            observer(.loading)
-        }
     }
 }
 
