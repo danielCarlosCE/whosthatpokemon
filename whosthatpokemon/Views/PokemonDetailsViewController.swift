@@ -44,7 +44,7 @@ class PokemonDetailsViewController: UIViewController {
                 self.pokemonDescription.text = ""
                 self.view.backgroundColor = .white
                 self.whosthatpokemon.image = nil
-                if  let image = payload.image  {
+                if  let image = payload.image {
                     self.whosthatpokemon.image = UIImage(data: image)
                 }
 

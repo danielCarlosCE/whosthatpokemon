@@ -30,11 +30,6 @@ class PokemonService: BaseService, PokemonServiceType {
     }
 }
 
-enum Result<T> {
-    case success(T)
-    case failure(Error)
-}
-
 enum FetchImageResult {
     case single(Data)
     case multiple([Data])
