@@ -32,6 +32,7 @@
 		9F7059F920B26BC9001A5EA3 /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7059F820B26BC9001A5EA3 /* PokemonDetails.swift */; };
 		9F7059FB20B27447001A5EA3 /* PokemonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7059FA20B27447001A5EA3 /* PokemonDetailsViewController.swift */; };
 		9F7059FD20B27BD6001A5EA3 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7059FC20B27BD6001A5EA3 /* BaseService.swift */; };
+		9F7059FF20B2F474001A5EA3 /* AddFavoriteFlowTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7059FE20B2F474001A5EA3 /* AddFavoriteFlowTestCase.swift */; };
 		9F9C0C9120B090EC00B3E868 /* FavoritesPokemonsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C0C9020B090EC00B3E868 /* FavoritesPokemonsService.swift */; };
 		9F9C0C9320B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C0C9220B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift */; };
 		9FA23AC620B18C9900F2D1D9 /* PokemonsStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA23AC520B18C9900F2D1D9 /* PokemonsStorageManager.swift */; };
@@ -95,6 +96,7 @@
 		9F7059F820B26BC9001A5EA3 /* PokemonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
 		9F7059FA20B27447001A5EA3 /* PokemonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsViewController.swift; sourceTree = "<group>"; };
 		9F7059FC20B27BD6001A5EA3 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		9F7059FE20B2F474001A5EA3 /* AddFavoriteFlowTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteFlowTestCase.swift; sourceTree = "<group>"; };
 		9F9C0C9020B090EC00B3E868 /* FavoritesPokemonsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPokemonsService.swift; sourceTree = "<group>"; };
 		9F9C0C9220B09A4B00B3E868 /* PokemonsListViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsListViewControllerTestCase.swift; sourceTree = "<group>"; };
 		9FA23AC520B18C9900F2D1D9 /* PokemonsStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsStorageManager.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				9F310E8B20AF7D0D00B8ADBA /* Info.plist */,
+				9F7059FE20B2F474001A5EA3 /* AddFavoriteFlowTestCase.swift */,
 			);
 			path = whosthatpokemonUITests;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 					};
 					9F310E8420AF7D0D00B8ADBA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9F310E6520AF7D0D00B8ADBA;
 					};
@@ -679,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7059FF20B2F474001A5EA3 /* AddFavoriteFlowTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,12 +897,14 @@
 			baseConfigurationReference = 688D522B26F5481942B7DD32 /* Pods-whosthatpokemonUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S7PZ8W24N;
 				INFOPLIST_FILE = whosthatpokemonUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielcarlosce.whosthatpokemonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = whosthatpokemon;
@@ -909,6 +916,7 @@
 			baseConfigurationReference = 6FF30CC9F57860E578D62E4F /* Pods-whosthatpokemonUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S7PZ8W24N;
 				INFOPLIST_FILE = whosthatpokemonUITests/Info.plist;

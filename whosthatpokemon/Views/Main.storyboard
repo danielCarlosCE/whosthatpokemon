@@ -157,6 +157,7 @@
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8q-fD-xxI">
                                 <rect key="frame" x="147.66666666666666" y="682" width="80" height="80"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Details.Pokeball"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="3mh-vo-wHj"/>
                                     <constraint firstAttribute="height" constant="80" id="pOW-oe-IHu"/>
@@ -168,6 +169,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="Details.View"/>
                         <constraints>
                             <constraint firstItem="I8q-fD-xxI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xRE-k6-F7g" secondAttribute="bottom" constant="8" id="77O-aG-zL2"/>
                             <constraint firstItem="xRE-k6-F7g" firstAttribute="height" secondItem="Zd1-jm-GPw" secondAttribute="height" multiplier="0.6" priority="750" id="7v9-c0-4du"/>

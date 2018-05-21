@@ -15,10 +15,12 @@ class AppCoordinator: Coordinator {
         let listNavigation = pokemonsListNavigation(service: dependenciesResolver.pokemonsService, path: .all)
         listNavigation.tabBarItem =
             UITabBarItem(title: "Catcha them all", image: R.image.backpack(), selectedImage: nil)
+        listNavigation.view.accessibilityIdentifier = "List.View"
 
         let favorites = pokemonsListNavigation(service: favoritesService, path: .favorites)
         favorites.tabBarItem =
             UITabBarItem(title: "My pokemons", image: R.image.pokeball(), selectedImage: nil)
+        favorites.view.accessibilityIdentifier = "Favorites.View"
 
         tabbar.viewControllers = [listNavigation, favorites]
 

@@ -7,6 +7,7 @@ class PokemonsListCollectionViewCell: UICollectionViewCell {
 
     func update(with model: Model) {
         id = model.id
+        self.contentView.accessibilityIdentifier = "PokemonCell-\(model.id)"
 
         name.text = formatTextToSolveFontPaddingIssue(model.name)
         whosthat.image = nil
