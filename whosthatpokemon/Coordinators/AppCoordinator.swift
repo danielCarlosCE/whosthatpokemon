@@ -5,12 +5,11 @@ protocol Coordinator {
 }
 
 class AppCoordinator: Coordinator {
-    let viewController: UIViewController
+    let tabbar = UITabBarController()
+    var viewController: UIViewController { return tabbar }
     let dependenciesResolver = AppDependenciesResolver()
 
     init() {
-        let tabbar = UITabBarController()
-        viewController = tabbar
 
         let listNavigation = pokemonsListNavigation(service: dependenciesResolver.pokemonsService)
 
@@ -32,8 +31,28 @@ class AppCoordinator: Coordinator {
         let listNavigation = UINavigationController(rootViewController: pokemonslistViewController)
         listNavigation.tabBarItem =
             UITabBarItem(title: "Catcha them all", image: R.image.backpack(), selectedImage: nil)
-        listNavigation.setNavigationBarHidden(true, animated: false)
+        pokemonslistViewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        pokemonslistViewController.didAppear  = { [weak listNavigation] in
+            listNavigation?.setNavigationBarHidden(true, animated: false)
+        }
+        pokemonslistViewController.didSelectItem = {[weak self] pokemon in
+            self?.navigateToDetails(from: listNavigation, with: pokemon)
+        }
 
         return listNavigation
+    }
+}
+
+extension AppCoordinator {
+    func navigateToDetails(from navigation: UINavigationController, with pokemonPayload: PokemonPayload) {
+        guard let detailsViewController = R.storyboard.main.pokemonDetails() else {
+            fatalError("Rswift wasn't able to find pokemonDetails at \(#function)")
+        }
+
+        let service = dependenciesResolver.pokemonDetailsService
+        detailsViewController.viewModel = PokemonDetailsViewModel(pokemonPayload: pokemonPayload, service: service)
+        navigation.pushViewController(detailsViewController, animated: true)
+        navigation.setNavigationBarHidden(false, animated: true)
     }
 }

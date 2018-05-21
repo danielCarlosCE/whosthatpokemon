@@ -4,6 +4,8 @@ class PokemonsListViewController: UIViewController {
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     var viewModel: PokemonsListViewModelType!
+    var didSelectItem: ((PokemonPayload) -> Void)?
+    var didAppear: (() -> Void)?
 
     private var pokemons: [Pokemon] = []
 
@@ -11,9 +13,13 @@ class PokemonsListViewController: UIViewController {
         guard viewModel != nil else { fatalError("\(String(describing: self)) initiated without ViewModel") }
 
         collection.dataSource = self
+        collection.delegate = self
 
         bindOutput()
         bindInput()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        didAppear?()
     }
 
     private func bindInput() {
@@ -70,4 +76,16 @@ extension PokemonsListViewController: UICollectionViewDataSource {
         return pokemons[row]
     }
 
+}
+
+extension PokemonsListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? PokemonsListCollectionViewCell else { return }
+        let pokemon = self.pokemon(for: indexPath)
+
+        var imageData: Data?
+        if let image = cell.whosthat.image { imageData = UIImagePNGRepresentation(image) }
+
+        didSelectItem?(PokemonPayload(pokemon: pokemon, image: imageData))
+    }
 }
